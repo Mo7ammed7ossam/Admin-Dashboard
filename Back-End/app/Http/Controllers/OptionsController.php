@@ -12,23 +12,23 @@ class OptionsController extends Controller
     public function store(Request $request)
     {
 
-        $option = $request->choosenOption;
+        // $option = $request->choosenOption;
         $size = $request->size;
 
-        $massage_Value = Options::query()->where('size', $size)->value('massage_therapy');
-        $care_Value = Options::query()->where('size', $size)->value('chiropractic_care');
-        $yoga_Value = Options::query()->where('size', $size)->value('yoga_exercise');
-        $other_Value = Options::query()->where('size', $size)->value('others');
+        // $massage_Value = Options::query()->where('size', $size)->value('massage_therapy');
+        // $care_Value = Options::query()->where('size', $size)->value('chiropractic_care');
+        // $yoga_Value = Options::query()->where('size', $size)->value('yoga_exercise');
+        // $other_Value = Options::query()->where('size', $size)->value('others');
 
-        if ($option == 'Not concerned') :
-            Options::query()->where('size', $size)->update(array('massage_therapy' => $massage_Value + 1));
-        elseif ($option == 'Slightly concerned') :
-            Options::query()->where('size', $size)->update(array('chiropractic_care' => $care_Value + 1));
-        elseif ($option == 'Somewhat concerned') :
-            Options::query()->where('size', $size)->update(array('yoga_exercise' => $yoga_Value + 1));
-        elseif ($option == 'Very concerned') :
-            Options::query()->where('size', $size)->update(array('others' => $other_Value + 1));
-        endif;
+        // if ($option == 'Not concerned') :
+        //     Options::query()->where('size', $size)->update(array('massage_therapy' => $massage_Value + 1));
+        // elseif ($option == 'Slightly concerned') :
+        //     Options::query()->where('size', $size)->update(array('chiropractic_care' => $care_Value + 1));
+        // elseif ($option == 'Somewhat concerned') :
+        //     Options::query()->where('size', $size)->update(array('yoga_exercise' => $yoga_Value + 1));
+        // elseif ($option == 'Very concerned') :
+        //     Options::query()->where('size', $size)->update(array('others' => $other_Value + 1));
+        // endif;
 
         $massage_Value = Options::query()->where('size', $size)->value('massage_therapy');
         $care_Value = Options::query()->where('size', $size)->value('chiropractic_care');
@@ -55,13 +55,32 @@ class OptionsController extends Controller
 
     public function storeUser(Request $request)
     {
-        $userExist = User::query()->where('email', $request->email)->first();
+        $option = $request->choosenOption;
+        $size = $request->size;
 
-        if ($userExist) :
-            $userExist->update($request->all());
-        else :
-            $user = User::create($request->all());
+        $massage_Value = Options::query()->where('size', $size)->value('massage_therapy');
+        $care_Value = Options::query()->where('size', $size)->value('chiropractic_care');
+        $yoga_Value = Options::query()->where('size', $size)->value('yoga_exercise');
+        $other_Value = Options::query()->where('size', $size)->value('others');
+
+        if ($option == 'Not concerned') :
+            Options::query()->where('size', $size)->update(array('massage_therapy' => $massage_Value + 1));
+        elseif ($option == 'Slightly concerned') :
+            Options::query()->where('size', $size)->update(array('chiropractic_care' => $care_Value + 1));
+        elseif ($option == 'Somewhat concerned') :
+            Options::query()->where('size', $size)->update(array('yoga_exercise' => $yoga_Value + 1));
+        elseif ($option == 'Very concerned') :
+            Options::query()->where('size', $size)->update(array('others' => $other_Value + 1));
         endif;
+
+
+        // $userExist = User::query()->where('email', $request->email)->first();
+
+        // if ($userExist) :
+        //     $userExist->update($request->all());
+        // else :
+        $user = User::create($request->all());
+        // endif;   
 
         return 'success';
     }
