@@ -42,20 +42,65 @@
                                             {{ $users }}
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            ( {{ $options->massage_therapy }} ) Votes
+                                            ( {{ $total_massage_Value }} ) Votes
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            ( {{ $options->chiropractic_care }} ) Votes
-                                        </td>
-
-                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            ( {{ $options->yoga_exercise }} ) Votes
+                                            ( {{ $total_care_Value }} ) Votes
                                         </td>
 
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            ( {{ $options->others }} ) Votes
+                                            ( {{ $total_yoga_Value }} ) Votes
+                                        </td>
+
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            ( {{ $total_other_Value }} ) Votes
                                         </td>
                                     </tr class="bg-white border-b">
+
+                                    <tr class="bg-white border-b">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Total
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            {{ $users300x250 }}
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            beard grooming products <br>({{ $option300x250->massage_therapy }} emails)
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            more eco-friendly options <br>({{ $option300x250->chiropractic_care }} emails)
+                                        </td>
+
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            sensitive skin shaving products <br>({{ $option300x250->yoga_exercise }} emails)
+                                        </td>
+
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            skin care with natural ingredients <br>({{ $option300x250->others }} emails)
+                                        </td>
+                                    </tr class="bg-white border-b">
+
+                                    <tr class="bg-white border-b">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Total
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            {{ $users300x600 }}
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            beard grooming products <br>({{ $option300x600->massage_therapy }} emails)
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            more eco-friendly options <br>({{ $option300x600->chiropractic_care }} emails)
+                                        </td>
+
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            sensitive skin shaving products <br>({{ $option300x600->yoga_exercise }} emails)
+                                        </td>
+
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            skin care with natural ingredients <br>({{ $option300x600->others }} emails)
+                                        </td>
+                                    </tr class="bg-white border-b">
+
                                 </tbody>
                             </table>
                         </div>

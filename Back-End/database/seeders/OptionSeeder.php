@@ -15,11 +15,28 @@ class OptionSeeder extends Seeder
      */
     public function run()
     {
-        Options::create([
-            'massage_therapy' => 0,
-            'chiropractic_care' => 0,
-            'yoga_exercise' => 0,
-            'others' => 0
-        ]);
+        $options = [
+            [
+                'size' => 'size300x250',
+                'massage_therapy' => 0,
+                'chiropractic_care' => 0,
+                'yoga_exercise' => 0,
+                'others' => 0
+            ],
+
+            [
+                'size' => 'size300x600',
+                'massage_therapy' => 0,
+                'chiropractic_care' => 0,
+                'yoga_exercise' => 0,
+                'others' => 0
+            ]
+        ];
+
+
+        foreach ($options as $option) :
+            Options::create($option);
+        endforeach;
+
     }
 }

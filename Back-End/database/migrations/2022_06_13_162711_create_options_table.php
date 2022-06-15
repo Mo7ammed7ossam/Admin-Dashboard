@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('options', function (Blueprint $table) {
             $table->id();
+            $table->string('size');
             $table->integer('massage_therapy');
             $table->integer('chiropractic_care');
             $table->integer('yoga_exercise');

@@ -13,21 +13,27 @@ class OptionsController extends Controller
     {
 
         $option = $request->choosenOption;
+        $size = $request->size;
 
-        $massage_Value = Options::query()->value('massage_therapy');
-        $care_Value = Options::query()->value('chiropractic_care');
-        $yoga_Value = Options::query()->value('yoga_exercise');
-        $other_Value = Options::query()->value('others');
+        $massage_Value = Options::query()->where('size', $size)->value('massage_therapy');
+        $care_Value = Options::query()->where('size', $size)->value('chiropractic_care');
+        $yoga_Value = Options::query()->where('size', $size)->value('yoga_exercise');
+        $other_Value = Options::query()->where('size', $size)->value('others');
 
         if ($option == 'Not concerned') :
-            Options::query()->update(array('massage_therapy' => $massage_Value + 1));
+            Options::query()->where('size', $size)->update(array('massage_therapy' => $massage_Value + 1));
         elseif ($option == 'Slightly concerned') :
-            Options::query()->update(array('chiropractic_care' => $care_Value + 1));
+            Options::query()->where('size', $size)->update(array('chiropractic_care' => $care_Value + 1));
         elseif ($option == 'Somewhat concerned') :
-            Options::query()->update(array('yoga_exercise' => $yoga_Value + 1));
+            Options::query()->where('size', $size)->update(array('yoga_exercise' => $yoga_Value + 1));
         elseif ($option == 'Very concerned') :
-            Options::query()->update(array('others' => $other_Value + 1));
+            Options::query()->where('size', $size)->update(array('others' => $other_Value + 1));
         endif;
+
+        $massage_Value = Options::query()->where('size', $size)->value('massage_therapy');
+        $care_Value = Options::query()->where('size', $size)->value('chiropractic_care');
+        $yoga_Value = Options::query()->where('size', $size)->value('yoga_exercise');
+        $other_Value = Options::query()->where('size', $size)->value('others');
 
         $total_votes = $massage_Value + $care_Value + $yoga_Value + $other_Value;
 
@@ -45,7 +51,6 @@ class OptionsController extends Controller
         ];
 
         return $result;
-
     }
 
     public function storeUser(Request $request)

@@ -382,6 +382,7 @@
                                  campaign: "5ee24bbe9ecceb2c3857eae6", // general
                                  regularId: "606dd85758b7914004a6c995", // regular
                                  choosenOption: choosenOption,
+                                 size: 'size300x600',
                                  isEmailSubmitted: 1,
                                  email: emailInput.value,
                                  date: new Date()
@@ -417,6 +418,7 @@
                          body: JSON.stringify({
                              id: "5ee24bbe9ecceb2c3857eae6", // general
                              regularId: "606dd85758b7914004a6c995", // regular Bank
+                             size: 'size300x600',
                              choosenOption: choosenOption
                          })
                      })
@@ -435,23 +437,23 @@
                              let somewhatConcerned = votes.find(vt => vt._id == "somewhat concerned");
 
                              let veryConcerned = votes.find(vt => vt._id == "very concerned");
-                             
+
                              let slightlyConcerned = votes.find(vt => vt._id == "slightly concerned");
-                             
+
                              let notConcerned = votes.find(vt => vt._id == "not concerned");
-                            
+
 
                              // => {name: "Albania", code: "AL"}
                              window.document.getElementById('yoga_exercise').innerHTML = (somewhatConcerned ? (Math
                                  .round((somewhatConcerned.count / result.totalVotes) * 100)) : 0) + '%'
-                             
-                            window.document.getElementById('other').innerHTML = (veryConcerned ? (Math.round((
+
+                             window.document.getElementById('other').innerHTML = (veryConcerned ? (Math.round((
                                  veryConcerned.count / result.totalVotes) * 100)) : 0) + '%'
-                            
-                            window.document.getElementById('chiropractic_care').innerHTML = (slightlyConcerned ? (Math
+
+                             window.document.getElementById('chiropractic_care').innerHTML = (slightlyConcerned ? (Math
                                  .round((slightlyConcerned.count / result.totalVotes) * 100)) : 0) + '%'
-                            
-                            window.document.getElementById('massage_therapy').innerHTML = (notConcerned ? (Math.round((
+
+                             window.document.getElementById('massage_therapy').innerHTML = (notConcerned ? (Math.round((
                                  notConcerned.count / result.totalVotes) * 100)) : 0) + '%'
 
                              if (result.succeeded) {
