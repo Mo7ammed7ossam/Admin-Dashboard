@@ -58,7 +58,7 @@
                                     </tr class="bg-white border-b">
 
                                     <tr class="bg-white border-b">
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Total
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">300x250
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             {{ $users300x250 }}
@@ -80,7 +80,7 @@
                                     </tr class="bg-white border-b">
 
                                     <tr class="bg-white border-b">
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Total
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">300x600
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             {{ $users300x600 }}
