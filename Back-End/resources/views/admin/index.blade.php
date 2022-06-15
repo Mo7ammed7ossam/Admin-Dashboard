@@ -18,7 +18,7 @@
 
                                         </th>
                                         <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                                            SingUp
+                                            Signup
                                         </th>
                                         <th scope="col" class="text-sm font-medium text-white px-6 py-4">
                                             Massage Therapy
