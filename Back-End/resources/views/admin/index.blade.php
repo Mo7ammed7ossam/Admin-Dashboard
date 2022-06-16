@@ -64,18 +64,18 @@
                                             {{ $users300x250 }}
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            Massage Therapy <br>({{ $option300x250->massage_therapy }} emails)
+                                            Massage Therapy <br>({{ $users300x250_message }} emails)
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            Chiropractic Care <br>({{ $option300x250->chiropractic_care }} emails)
-                                        </td>
-
-                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            Yoga Exercise <br>({{ $option300x250->yoga_exercise }} emails)
+                                            Chiropractic Care <br>({{ $users300x250_care }} emails)
                                         </td>
 
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            Other <br>({{ $option300x250->others }} emails)
+                                            Yoga Exercise <br>({{ $users300x250_yoga }} emails)
+                                        </td>
+
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            Other <br>({{ $users300x250_other }} emails)
                                         </td>
                                     </tr class="bg-white border-b">
 
@@ -86,18 +86,18 @@
                                             {{ $users300x600 }}
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                           Massage Therapy <br>({{ $option300x600->massage_therapy }} emails)
+                                           Massage Therapy <br>({{ $users300x600_message }} emails)
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            Chiropractic Care <br>({{ $option300x600->chiropractic_care }} emails)
-                                        </td>
-
-                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            Yoga Exercise <br>({{ $option300x600->yoga_exercise }} emails)
+                                            Chiropractic Care <br>({{ $users300x600_care }} emails)
                                         </td>
 
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            Other <br>({{ $option300x600->others }} emails)
+                                            Yoga Exercise <br>({{ $users300x600_yoga }} emails)
+                                        </td>
+
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            Other <br>({{ $users300x600_other }} emails)
                                         </td>
                                     </tr class="bg-white border-b">
 

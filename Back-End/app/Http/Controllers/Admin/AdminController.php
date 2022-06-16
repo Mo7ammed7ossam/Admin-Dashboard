@@ -18,8 +18,17 @@ class AdminController extends Controller
         $total_other_Value = Options::query()->sum('others');
 
 
-        $option300x250 = Options::query()->where('size', 'size300x250')->first();
-        $option300x600 = Options::query()->where('size', 'size300x600')->first();
+        $users300x250_message = User::query()->where('size', 'size300x250')->where('choosenOption', 'Not concerned')->get()->count();
+        $users300x250_care = User::query()->where('size', 'size300x250')->where('choosenOption', 'Slightly concerned')->get()->count();
+        $users300x250_yoga = User::query()->where('size', 'size300x250')->where('choosenOption', 'Somewhat concerned')->get()->count();
+        $users300x250_other = User::query()->where('size', 'size300x250')->where('choosenOption', 'Very concerned')->get()->count();
+
+
+        $users300x600_message = User::query()->where('size', 'size300x600')->where('choosenOption', 'Not concerned')->get()->count();
+        $users300x600_care = User::query()->where('size', 'size300x600')->where('choosenOption', 'Slightly concerned')->get()->count();
+        $users300x600_yoga = User::query()->where('size', 'size300x600')->where('choosenOption', 'Somewhat concerned')->get()->count();
+        $users300x600_other = User::query()->where('size', 'size300x600')->where('choosenOption', 'Very concerned')->get()->count();
+
 
         $users = User::query()->where('is_admin', false)->get()->count();
 
@@ -33,11 +42,17 @@ class AdminController extends Controller
             'total_other_Value' => $total_other_Value,
             'users' => $users,
 
-            'option300x250' => $option300x250,
             'users300x250' => $users300x250,
+            'users300x250_message' => $users300x250_message,
+            'users300x250_care' => $users300x250_care,
+            'users300x250_yoga' => $users300x250_yoga,
+            'users300x250_other' => $users300x250_other,
 
-            'option300x600' => $option300x600,
             'users300x600' => $users300x600,
+            'users300x600_message' => $users300x600_message,
+            'users300x600_care' => $users300x600_care,
+            'users300x600_yoga' => $users300x600_yoga,
+            'users300x600_other' => $users300x600_other,
 
         ]);
     }
